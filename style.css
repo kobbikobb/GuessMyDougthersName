@@ -7,7 +7,7 @@ h1, h2, h3, h4 {
     height: 80px;
     position: relative;
     z-index: 1;
-    background: #963696;
+    background: #8E65A8;
     margin: 0 auto
 }
 
@@ -19,26 +19,43 @@ h1, h2, h3, h4 {
     padding-right: 48px;
 }
 
+#content{
+    position: relative
+}
+
 #header-inner {
     position: relative;
     padding-top: 16px;
     height: 87px
 }
 
-#result{
-	background-color: yellow;
+.result{
+	background-color: #FFDFCF
 }
-#imageContainer {
+
+.imageContainer{
+    margin-top: 40px
 }
+
+.statistics{
+    background-color: #F76DCB; 
+    position: absolute;
+    z-index: 1;
+    right: 0px;
+    top: 0px;
+    border: 1px solid black; 
+    padding: 20px
+}
+
 #image1 {
     border: 3px solid blue;
-    transform: rotate(7deg);
+    transform: rotate(7deg)
 }
 #image2 {
     border: 3px solid fuchsia; 
-    transform: rotate(-7deg);
+    transform: rotate(-6deg)
 }
 #image3 {
     border: 3px solid green; 
-    transform: rotate(7deg);
+    transform: rotate(5deg)
 }
