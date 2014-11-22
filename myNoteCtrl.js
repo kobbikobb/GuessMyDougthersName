@@ -27,12 +27,12 @@ app.controller("myNoteCtrl", function($scope) {
     }
 
     function isFirstName(name){
-    	var targetHash = "eec229ecac5b13700df004d9919fb2558c83a65b";
+    	var targetHash = "5e1556135952b1f4d84ad74c50f9f0a3d31c26fd";
     	return isNameMatch(name, targetHash);
     }
 
     function isSecondName(name){
-    	var targetHash = "55fbd3d1c0fe477b4bceea2bc39106d8bb023700";
+    	var targetHash = "fe96c6ad4a0b897370b9b263f445f5a27ad788c6";
     	return isNameMatch(name, targetHash);
     }
 
