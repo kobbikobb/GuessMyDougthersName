@@ -7,7 +7,7 @@ h1, h2, h3, h4 {
     height: 80px;
     position: relative;
     z-index: 1;
-    background: #963696;
+    background: #8E65A8;
     margin: 0 auto
 }
 
@@ -19,6 +19,10 @@ h1, h2, h3, h4 {
     padding-right: 48px;
 }
 
+#content{
+    position: relative
+}
+
 #header-inner {
     position: relative;
     padding-top: 16px;
@@ -26,11 +30,21 @@ h1, h2, h3, h4 {
 }
 
 .result{
-	background-color: yellow
+	background-color: #FFDFCF
 }
 
 .imageContainer{
-    margin-top: 20px
+    margin-top: 40px
+}
+
+.statistics{
+    background-color: #F76DCB; 
+    position: absolute;
+    z-index: 1;
+    right: 0px;
+    top: 0px;
+    border: 1px solid black; 
+    padding: 20px
 }
 
 #image1 {

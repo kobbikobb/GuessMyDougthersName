@@ -4,6 +4,7 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="loading-bar.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css"></link>
 	<link rel="stylesheet" type="text/css" href='loading-bar.css'></link>
 <body>
@@ -21,8 +22,8 @@
 		<form ng-submit="guessName()">
 			<p>
 				Nafnið þitt: <input type="text" ng-model="userName" /> 
-				Þín ágiskun({{numberOfAttemts}}): <input type="text" ng-model="guessedName" /> 
-				<input type="submit" value="Giska" />
+				Þín ágiskun: <input type="text" ng-model="guessedName" /> 
+				<input type="submit" value="Giska" class="btn btn-default"/>
 			<p/>
 		</form>
 
@@ -32,6 +33,12 @@
 			<img id="image1" src="egibilstol.jpg" />
 			<img id="image2" src="egsofandi.jpg" />
 			<img id="image3" src="egogmamma.jpg" />
+		</div>
+
+		<div class="statistics">
+			Fjöldi tilrauna: {{totalTries}} <br/>
+			Fjöldi að hluta rétt: {{partiallyCorrectTries}}<br/>
+			Fjöldi réttra tilrauna: {{correctTries}}
 		</div>
 	</div>
 
