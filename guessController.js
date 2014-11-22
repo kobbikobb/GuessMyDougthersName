@@ -5,13 +5,31 @@ app.controller("guessController", function($scope, $http) {
 	$scope.numberOfAttemts = 0;
 
     $scope.guessName = function(){
-        var url = "http://guessnamesrestful.apphb.com/api/guesses?nameId=1" +
+        if($scope.userName == ""){
+            $scope.result = "Vinsamlegast sláðu inn nafnið þitt";
+        }
+        else if($scope.guessedName == ""){
+            $scope.result = "Vinsamlegast sláðu inn ágiskun";
+        }
+        else{
+            postGuessNameRequest();
+        }
+    }
+
+    function postGuessNameRequest(){
+          var url = "http://guessnamesrestful.apphb.com/api/guesses?nameId=1" +
         "&userName=" + $scope.userName + 
         "&guessedName=" + $scope.guessedName;
 
-        $http.post(url).success(function(data, status, headers, config) {
-            processGuessResult(data);
-        });
+        $http.post(url)
+            .success(function(data, status, headers, config) {
+                processGuessResult(data);
+            })
+             .error(function(data, status, headers, config) {
+                // called asynchronously if an error occurs
+                // or server returns response with an error status.
+                $scope.result = "Gat ekki giskað, reyndu aftur seinna";
+            });
     }
 
     function processGuessResult(result){

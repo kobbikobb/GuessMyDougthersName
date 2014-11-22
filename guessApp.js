@@ -1,1 +1,1 @@
-var app = angular.module("guessApp", []); 
+var app = angular.module("guessApp", ['angular-loading-bar']); 

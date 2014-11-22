@@ -3,7 +3,9 @@
 <head>
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="loading-bar.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css"></link>
+	<link rel="stylesheet" type="text/css" href='loading-bar.css'></link>
 <body>
 
 	<div id="header">
@@ -24,9 +26,9 @@
 			<p/>
 		</form>
 
-		<p><span id="result" ng-bind="result"></span></p>
+		<p><span ng-bind="result" class="result"></span></p>
 
-		<div id"imageContainer">
+		<div class="imageContainer">
 			<img id="image1" src="egibilstol.jpg" />
 			<img id="image2" src="egsofandi.jpg" />
 			<img id="image3" src="egogmamma.jpg" />
