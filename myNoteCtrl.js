@@ -5,7 +5,7 @@ app.controller("myNoteCtrl", function($scope) {
 
     $scope.guessName = function(){
     	if(isCorrect()){
-    		$scope.result = "Til hamingju," + $scope.guessedName + " er rétt svar :)";
+    		$scope.result = "Til hamingju, " + $scope.guessedName + " er rétt svar :)";
     	} else if(isFirstNameCorrect()){
     		$scope.result = "Þú ert að hitna, " + $scope.guessedName + " er að hluta rétt!";
     	}else{
@@ -27,12 +27,12 @@ app.controller("myNoteCtrl", function($scope) {
     }
 
     function isFirstName(name){
-    	var targetHash = "5e1556135952b1f4d84ad74c50f9f0a3d31c26fd";
+    	var targetHash = "c6cb22edafd6cc08743a2bb5df9299cffef856cd";
     	return isNameMatch(name, targetHash);
     }
 
     function isSecondName(name){
-    	var targetHash = "fe96c6ad4a0b897370b9b263f445f5a27ad788c6";
+    	var targetHash = "34903d996d807bb2d134b56dd9b3cdefa075ae56";
     	return isNameMatch(name, targetHash);
     }
 
@@ -43,7 +43,8 @@ app.controller("myNoteCtrl", function($scope) {
     }
 
     function getHash(value){
-		var shaObj = new jsSHA(value, "TEXT");
+        var salt = "sætustÍHeimi";
+		var shaObj = new jsSHA(value + salt, "TEXT");
 		return shaObj.getHash("SHA-1", "HEX");
     }
 }); 
