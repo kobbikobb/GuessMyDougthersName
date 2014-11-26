@@ -32,9 +32,12 @@ app.controller("guessController", function($scope, $http) {
                 processGuessResult(data);
             })
              .error(function(data, status, headers, config) {
-                // called asynchronously if an error occurs
-                // or server returns response with an error status.
-                $scope.result = "Gat ekki giskað, reyndu aftur seinna";
+                if(status == "401"){
+                    $scope.result = "Tilraunir þínar í dag eru búnar, reyndu aftur á morgun!";
+                }
+                else{
+                    $scope.result = "Gat ekki haft samband við netfþjón, vinsamlegast reyndu síðar!";
+                }
             });
     }
 
